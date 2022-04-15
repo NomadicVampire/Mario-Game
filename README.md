@@ -1,6 +1,7 @@
 MARIO GAME
 
-Visit to play game:  https://nomadicvampire.github.io/Mario-Game/
+Technologies/Languages Used:
+This game is built using JavaScript, HTML Canvas
 
 How to play Game:
 Left - A
@@ -12,13 +13,9 @@ Rules:
 -> If you fall, then you die.
 -> If reach the end platform then you win.
 
-Technologies/Languages Used:
-This game is built using JavaScript, HTML Canvas
 
-Download Canvas Boilerplate from : https://github.com/christopher4lis/canvas-boilerplate
+Clone Canvas Boilerplate from : https://github.com/christopher4lis/canvas-boilerplate
+Then run command 'npm start' to run live server to enjoy game.
 
-
-
-
-
+Thank You !
 Happy Gaming !  ;)
