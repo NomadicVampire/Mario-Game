@@ -8,7 +8,6 @@ import spriteRunLeft from '../img/spriteRunLeft.png'
 import spriteRunRight from '../img/spriteRunRight.png'
 import spriteStandLeft from '../img/spriteStandLeft.png'
 import spriteStandRight from '../img/spriteStandRight.png'
-console.log(platform)
 
 // accessing canvas 
 const canvas = document.querySelector('canvas')
@@ -27,7 +26,7 @@ class Player {
     // whatever the property this player carries will be initailized due to constructor
     constructor(){
         // player will have x and y position, and will have some hieght and widht
-        this.speed = 10
+        this.speed = 9.3
         this.position = {
             x:100,
             y:100
@@ -205,7 +204,7 @@ platforms = [
   new Platform({x: platformImage.width*2 +170, y:420, image:platformImage}),
   new Platform({x: platformImage.width*3 +400, y:420, image:platformImage}),
   new Platform({x: platformImage.width*3 + 978, y:420, image:platformImage}),
-  new Platform({x: platformImage.width*5 +850, y:420, image:platformImage}),
+  new Platform({x: platformImage.width*5 +860, y:420, image:platformImage}),
   new Platform({x: platformImage.width*7 +490, y:320, image:airplatformImage}),
   new Platform({x: platformImage.width*8 +600, y:320, image:smallplatformImage}),
   new Platform({x: platformImage.width*8 +1000, y:320, image:smallplatformImage}),
@@ -232,7 +231,7 @@ genericObject = [new GenericObject({
   y:0,
   image:createImage(hills)})]
 
-scrollOffset = 0  
+scrollOffset = 0
 
 }  //close of init()
 
@@ -261,7 +260,7 @@ function animate() {
 
     //OR statements prevents the player to go behind start point
     else if(
-      (keys.left.pressed && player.position.x >100) || (keys.left.pressed && scrollOffset == 0 && player.position.x > 0)) player.velocity.x = -player.speed
+      (keys.left.pressed && player.position.x >150) || (keys.left.pressed && scrollOffset == 0 && player.position.x > 0)) player.velocity.x = -player.speed
     
     // when it hits edges, then we scroll background
     else {
@@ -279,7 +278,7 @@ function animate() {
             // moving genericObjects
             genericObject.forEach(genericObject =>{
               genericObject.position.x -= player.speed *0.50
-              //take less value than 5 so to get more realastic animation 
+              //take less value than player speed so to get more realastic animation 
             })
         }
         // if player moves then platform moves
@@ -333,10 +332,7 @@ function animate() {
   player.speed = 0
   console.log('You Win!')
   }
-  // for going back to 
-  else if((keys.left.pressed && player.position.x >100) && (keys.left.pressed && scrollOffset > platformImage.width*14 + 550 && player.position.x > 0)){
-    player.speed = 10
-    }
+  
     
 
     // LOSING condition
