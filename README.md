@@ -13,7 +13,12 @@ Rules:
 -> If reach the end platform then you win.
 
 Technologies/Languages Used:
-This game is built using JavaScript, HTML Canvas, and Node(for running Live Server)
+This game is built using JavaScript, HTML Canvas
+
+Download Canvas Boilerplate from : https://github.com/christopher4lis/canvas-boilerplate
+
+
+
 
 
 Happy Gaming !  ;)
